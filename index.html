@@ -227,8 +227,8 @@
             position: fixed;
             right: 1rem;
             bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-            width: min(360px, calc(100vw - 2rem));
-            height: 80px;
+            width: min(660px, calc(100vw - 2rem));
+            height: 175px;
             z-index: 30;
             pointer-events: auto;
         }
@@ -264,13 +264,14 @@
         /* Mobile Friendliness Adjustments */
         @media (min-width: 769px) and (max-width: 1366px) { /* iPad Air / iPad Pro landscape + portrait */
             .music-player {
-                right: 0.75rem;
+                left: 50%;
+                right: auto;
                 bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
-                width: min(280px, calc(100vw - 2rem));
-                height: 72px;
+                width: min(620px, calc(100vw - 1.5rem));
+                transform: translateX(-50%);
             }
             .copyright-text {
-                bottom: calc(5.4rem + env(safe-area-inset-bottom, 0px));
+                bottom: calc(12.75rem + env(safe-area-inset-bottom, 0px));
                 padding: 0 1rem;
                 box-sizing: border-box;
             }
@@ -283,12 +284,19 @@
             .links-container { min-height: 36px; } /* Adjust if needed */
             .github-button svg { width: 26px; height: 26px; }
             .content-overlay { padding: 1.5rem; padding-bottom: 3rem; /* Ensure space for copyright */ }
-            .copyright-text { font-size: 0.7rem; bottom: calc(6rem + env(safe-area-inset-bottom, 0px)); }
+            .copyright-text {
+                font-size: 0.7rem;
+                bottom: calc(12rem + env(safe-area-inset-bottom, 0px));
+                padding: 0 1rem;
+                box-sizing: border-box;
+            }
             .music-player {
-                right: 0.75rem;
+                left: 50%;
+                right: auto;
                 bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
                 width: calc(100vw - 1.5rem);
-                max-width: 420px;
+                max-width: 620px;
+                transform: translateX(-50%);
             }
         }
          @media (max-width: 480px) { /* Smaller phones */
@@ -300,7 +308,14 @@
             .github-button { padding: 0.4rem; }
             .content-overlay { padding: 1rem; padding-bottom: 2.5rem; /* Ensure space for copyright */ }
             .typewriter-cursor { height: 0.9em; }
-            .copyright-text { font-size: 0.65rem; bottom: calc(5.8rem + env(safe-area-inset-bottom, 0px)); }
+            .copyright-text {
+                font-size: 0.65rem;
+                bottom: calc(11.75rem + env(safe-area-inset-bottom, 0px));
+            }
+            .music-player {
+                bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+                width: calc(100vw - 1rem);
+            }
         }
         @media (max-height: 600px) and (max-width: 480px) { /* Very short screens */
              .intro-text { font-size: 1.6rem; height: calc(1.6rem * 1.2); margin-bottom: 0.4rem;}
