@@ -223,7 +223,7 @@
             /* animation: fadeIn 1s ease-out forwards; Will be triggered by JS */
         }
 
-        .spotify-player {
+        .music-player {
             position: fixed;
             right: 1rem;
             bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
@@ -232,7 +232,7 @@
             z-index: 30;
             pointer-events: auto;
         }
-        .spotify-player iframe {
+        .music-player iframe {
             width: 100%;
             height: 100%;
             border: 0;
@@ -263,7 +263,7 @@
 
         /* Mobile Friendliness Adjustments */
         @media (min-width: 769px) and (max-width: 1366px) { /* iPad Air / iPad Pro landscape + portrait */
-            .spotify-player {
+            .music-player {
                 right: 0.75rem;
                 bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
                 width: min(280px, calc(100vw - 2rem));
@@ -284,7 +284,7 @@
             .github-button svg { width: 26px; height: 26px; }
             .content-overlay { padding: 1.5rem; padding-bottom: 3rem; /* Ensure space for copyright */ }
             .copyright-text { font-size: 0.7rem; bottom: calc(6rem + env(safe-area-inset-bottom, 0px)); }
-            .spotify-player {
+            .music-player {
                 right: 0.75rem;
                 bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
                 width: calc(100vw - 1.5rem);
@@ -340,11 +340,11 @@
         </div>
     </div>
 
-    <div class="spotify-player" aria-label="Spotify player for All the Stars by Kendrick Lamar and SZA">
+    <div class="music-player" aria-label="Apple Music player for All the Stars by Kendrick Lamar and SZA">
         <iframe
-            src="https://open.spotify.com/embed/track/3GCdLUSnKSMJhs4Tj6CV3s?utm_source=generator&t=35"
+            src="https://embed.music.apple.com/us/album/black-panther-the-album/1440906927?i=1440906939"
             loading="lazy"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
             title="All the Stars by Kendrick Lamar and SZA">
         </iframe>
     </div>
